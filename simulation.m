@@ -29,6 +29,7 @@ F.InitialValue = arrayfun(@(x)x.x0,states(:));
 % Check the available solvers: web(fullfile(docroot, 'matlab/ref/ode.html?s_tid=doc_srchtitle'))
 if isfield(config,'solver')
     F.Solver = config.solver;
+    fprintf('Solver set to %s\n',config.solver)
 end
 
 % The available options will depend on the selected solver.
@@ -36,6 +37,7 @@ if isfield(config,'solverOptions')
     for field = fieldnames(config.solverOptions)'
         if isprop(F.SolverOptions,field{1})
             F.SolverOptions.(field{1}) = config.solverOptions.(field{1});
+            fprintf('Solver option %s set to %s\n',field{1},string(config.solverOptions.(field{1})))
         else
             warning('Option %s not valid for selected solver',field{1});
         end

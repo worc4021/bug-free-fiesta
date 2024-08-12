@@ -8,8 +8,10 @@
             "velocity0": -1
         }
     },
+    "solver": "ode45",
     "solverOptions": {
-        "hello": 1.4
+        "hello": 1.4,
+        "MaxStep": 0.01
     },
     "experiment": {
         "StartTime": 0,
