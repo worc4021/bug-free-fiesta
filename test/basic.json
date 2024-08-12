@@ -1,0 +1,18 @@
+{
+    "gravitymodel": "radial",
+    "model": {
+        "gravity": {
+            "g": 9.85
+        },
+        "drag": {
+            "velocity0": -1
+        }
+    },
+    "solverOptions": {
+        "hello": 1.4
+    },
+    "experiment": {
+        "StartTime": 0,
+        "StopTime": 8
+    }
+}
